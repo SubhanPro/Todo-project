@@ -1,6 +1,10 @@
-{% entends 'base.html' %}
+{% extends 'base.html' %}
 {% block title %}{% endblock %}
 {% block content %}
+<br>
+<center>
+  <h1>Login</h1>
+</center>
     <div>
         {% if messages %}
     <ul class="messages">
@@ -26,4 +30,5 @@
                 <a class="btn btn-primary  mx-5" href="{% url 'register' %}">Dont have account? Click here to create one!</a>
               </form>
         </div>
+     
 {% endblock %}

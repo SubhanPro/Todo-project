@@ -1,20 +1,28 @@
 {% extends 'base.html' %}
 {% block title %}{% endblock %}
 {% block content %}
+<br>
+<br>
+<center>
   <form method="post">
     {% csrf_token %}
     <div class="card" style="width: 18rem;">
         <div class="card-body">
             <h5 class="card-title">Enter title:</h5>
             <input class="form-control me-2" type="text" aria-label="Search" name = "title">
+            <br>
             <h5 class="card-subtitle mb-2 text-body-secondary">Enter start time</h5>
             <input class="form-control me-2" type="time" aria-label="Search" name = "start_time">
+            <br>
             <h5 class="card-subtitle mb-2 text-body-secondary">Enter end time</h5>
             <input class="form-control me-2" type="time" aria-label="Search" name = "end_time">
+            <br>
             <h5 class="card-subtitle mb-2 text-body-secondary">Enter date</h5>
             <input class="form-control me-2" type="date" aria-label="Search" name = "date">
-          <button type="submit">Create</button>
+            <br>
+          <button type="submit" class="btn btn-primary">Create</button>
         </div>
       </div>
     </form>
+  </center>
 {% endblock %}

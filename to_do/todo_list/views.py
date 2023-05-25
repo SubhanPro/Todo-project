@@ -32,3 +32,10 @@ def create(request):
         return render(request, 'create.html')
     else:
         raise Http404
+    
+
+def delete_todo(request, id):
+    todo = ToDoModel.objects.get(id = id)
+    todo.delete()
+    return redirect('index')
+
